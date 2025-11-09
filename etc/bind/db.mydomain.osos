@@ -1,0 +1,17 @@
+;
+$TTL    604800
+@       IN      SOA     ns.mydomain.osos. root.mydomain.osos. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.mydomain.osos.
+ns      IN      A       192.168.50.101
+srv1    IN      A       192.168.50.101
+srv2    IN      A       192.168.50.102
+www     IN      CNAME   srv2
+blog    IN      CNAME   srv2
+data    IN      A       192.168.50.103
+relay   IN      A       192.168.50.103
